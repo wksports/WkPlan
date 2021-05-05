@@ -45,7 +45,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private GraphFragment graphFragment;
     private AlarmFragment alarmFragment;
     private static final String[] FRAGMENT_TAGS=
-            new String[]{"homeFragment","calendarFragment","graphFragment","alarmFragment"};
+            new String[]{"homeFragment","calendarFragment"};
     private int savedIndex=0;
     private long preTime;
     @Override
@@ -87,12 +87,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         calendarTab=findViewById(R.id.calendar_tab);
         calendarImg=findViewById(R.id.calendar_img);
         calendarText=findViewById(R.id.calendar_text);
-        graphTab=findViewById(R.id.graph_tab);
-        graphImg=findViewById(R.id.graph_img);
-        graphText=findViewById(R.id.graph_text);
-        alarmTab=findViewById(R.id.alarm_tab);
-        alarmImg=findViewById(R.id.alarm_img);
-        alarmText=findViewById(R.id.alarm_text);
+
     }
     private void initToolbar(){
         setSupportActionBar(toolbar);
@@ -101,8 +96,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private void initListener(){
         homeTab.setOnClickListener(this);
         calendarTab.setOnClickListener(this);
-        graphTab.setOnClickListener(this);
-        alarmTab.setOnClickListener(this);
+
     }
     private void setTabSelection(int index){
         clearSelection();
@@ -133,31 +127,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                     transaction.show(calendarFragment);
                 }
                 break;
-            case 2:
-                savedIndex=2;
-                toolbar.setTitle(getResources().getString(R.string.graph));
-                graphImg.setImageResource(R.drawable.graph2);
-                graphText.setTextColor(getResources().getColor(R.color.colorPrimary));
-                if(graphFragment==null){
-                    graphFragment=new GraphFragment();
-                    transaction.add(R.id.main_content,graphFragment,FRAGMENT_TAGS[2]);
-                }else{
-                    transaction.show(graphFragment);
-                }
-                break;
-            case 3:
-            default:
-                savedIndex=3;
-                toolbar.setTitle(getResources().getString(R.string.alarm));
-                alarmImg.setImageResource(R.drawable.alarm2);
-                alarmText.setTextColor(getResources().getColor(R.color.colorPrimary));
-                if(alarmFragment==null){
-                    alarmFragment=new AlarmFragment();
-                    transaction.add(R.id.main_content,alarmFragment,FRAGMENT_TAGS[3]);
-                }else{
-                    transaction.show(alarmFragment);
-                }
-                break;
+
         }
         transaction.commit();
     }
@@ -166,10 +136,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         homeText.setTextColor(getResources().getColor(R.color.day_text_color));
         calendarImg.setImageResource(R.drawable.calendar);
         calendarText.setTextColor(getResources().getColor(R.color.day_text_color));
-        graphImg.setImageResource(R.drawable.graph);
-        graphText.setTextColor(getResources().getColor(R.color.day_text_color));
-        alarmImg.setImageResource(R.drawable.alarm);
-        alarmText.setTextColor(getResources().getColor(R.color.day_text_color));
+
     }
     private void hideFragments(FragmentTransaction transaction){
         if(homeFragment!=null){
@@ -178,12 +145,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         if(calendarFragment!=null){
             transaction.hide(calendarFragment);
         }
-        if(graphFragment!=null){
-            transaction.hide(graphFragment);
-        }
-        if(alarmFragment!=null){
-            transaction.hide(alarmFragment);
-        }
+
     }
     @Override
     public void onClick(View v) {
@@ -194,12 +156,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.calendar_tab:
                 setTabSelection(1);
                 break;
-            case R.id.graph_tab:
-                setTabSelection(2);
-                break;
-            case R.id.alarm_tab:
-                setTabSelection(3);
-                break;
+
         }
     }
 
@@ -214,7 +171,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
             long curTime=System.currentTimeMillis();
             if ((curTime - preTime) > 1000 * 2) {
-                ToastUtil.showToast("再按一次退出程序");
+                ToastUtil.showToast("再按一次返回上一级");
                 preTime = curTime;
             }else{
                 finish();

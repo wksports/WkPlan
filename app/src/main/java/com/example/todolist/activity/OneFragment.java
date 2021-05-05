@@ -91,7 +91,6 @@ public class OneFragment extends Fragment {
         initData();
         initView();
         Button button=view.findViewById(R.id.button1);
-
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -100,6 +99,15 @@ public class OneFragment extends Fragment {
                 getActivity().startActivity(intent);//当然也可以写成getContext()
             }
         });
+
+        Button button1=view.findViewById(R.id.button2);
+        button1.setOnClickListener(new View.OnClickListener() {      //  点击跳转时
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(),"跳转到我的日程", Toast.LENGTH_SHORT).show();
+            }
+        });
+
 
         return view;
     }

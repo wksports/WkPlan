@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:minHeight="?android:attr/actionBarSize"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        android:background="@color/colorTheme"
+        android:background="@color/graph_blue"
         app:title="@string/home">
     </androidx.appcompat.widget.Toolbar>
     <include layout="@layout/horizontal_line"/>
@@ -34,19 +34,20 @@
             android:gravity="center"
             android:paddingTop="@dimen/default_inner_padding"
             android:paddingBottom="@dimen/default_inner_padding">
+
             <ImageView
                 android:id="@+id/home_img"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/home"
-                />
+                android:layout_width="34dp"
+                android:layout_height="17dp"
+                android:src="@drawable/defind" />
+
             <TextView
                 android:id="@+id/home_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/home"
-                android:textSize="14sp"
-                android:textColor="@color/day_text_color"/>
+                android:textColor="@color/day_text_color"
+                android:textSize="14sp" />
         </LinearLayout>
         <LinearLayout
             android:id="@+id/calendar_tab"
@@ -70,49 +71,7 @@
                 android:textSize="14sp"
                 android:textColor="@color/day_text_color"/>
         </LinearLayout>
-        <LinearLayout
-            android:id="@+id/graph_tab"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:paddingTop="@dimen/default_inner_padding"
-            android:paddingBottom="@dimen/default_inner_padding">
-            <ImageView
-                android:id="@+id/graph_img"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/graph" />
-            <TextView
-                android:id="@+id/graph_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/graph"
-                android:textSize="14sp"
-                android:textColor="@color/day_text_color"/>
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/alarm_tab"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:paddingTop="@dimen/default_inner_padding"
-            android:paddingBottom="@dimen/default_inner_padding">
-            <ImageView
-                android:id="@+id/alarm_img"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/alarm" />
-            <TextView
-                android:id="@+id/alarm_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/alarm"
-                android:textSize="14sp"
-                android:textColor="@color/day_text_color"/>
-        </LinearLayout>
+
+
     </LinearLayout>
 </LinearLayout>
