@@ -15,8 +15,13 @@ Wk规划APP version1.0(测试版)
 <br>7.可以通过日历查看每一天的清单完成状况</br>
 <br>8.启动APP有启动界面，用intent跳转到主界面</br>
 ### 功能展示
-
-
+![Image text](https://github.com/wksports/WkPlan/blob/master/picture/picture1.jpg)
+![Image text](https://github.com/wksports/WkPlan/blob/master/picture/picture2.jpg)
+![Image text](https://github.com/wksports/WkPlan/blob/master/picture/picture3.jpg)
+![Image text](https://github.com/wksports/WkPlan/blob/master/picture/picture4.jpg)
+![Image text](https://github.com/wksports/WkPlan/blob/master/picture/picture5.jpg)
+![Image text](https://github.com/wksports/WkPlan/blob/master/picture/picture6.jpg)
+![Image text](https://github.com/wksports/WkPlan/blob/master/picture/picture7.jpg)
 
 
 
