@@ -17,6 +17,8 @@ Wk规划APP version1.0(测试版)
 ### 功能展示
 ![Image text](https://github.com/wksports/WkPlan/blob/master/picture/picture1.jpg)
 ![Image text](https://github.com/wksports/WkPlan/blob/master/picture/picture2.jpg)
+![Image text](https://github.com/wksports/WkPlan/blob/master/picture/picture21.jpg)
+![Image text](https://github.com/wksports/WkPlan/blob/master/picture/picture22.jpg)
 ![Image text](https://github.com/wksports/WkPlan/blob/master/picture/picture3.jpg)
 ![Image text](https://github.com/wksports/WkPlan/blob/master/picture/picture4.jpg)
 ![Image text](https://github.com/wksports/WkPlan/blob/master/picture/picture5.jpg)
