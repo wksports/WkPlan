@@ -1,11 +1,14 @@
 package com.example.todolist.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -40,19 +43,6 @@ public class ThreeFragment extends Fragment {
 
         }
 
-    public class Center extends AppCompatActivity {
-        private ImageView blurImageView;
-        private ImageView avatarImageView;
-        private ItemView center;
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            this.requestWindowFeature(Window.FEATURE_NO_TITLE);//去掉标题栏
-            setContentView(R.layout.center);
-            blurImageView = (ImageView) findViewById(R.id.iv_blur);
-            avatarImageView = (ImageView) findViewById(R.id.iv_avatar);
-        }
 
-    }
     }
 

@@ -8,30 +8,27 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_below="@+id/toolbar" />
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-    <Button
-        android:layout_marginLeft="25dp"
-        android:id="@+id/button1"
-        android:layout_width="160dp"
-        android:layout_height="110dp"
-        android:backgroundTint="#03A9F4"
-        android:text="任务清单"
-        android:textSize="20dp">
-    </Button>
-        <Button
-            android:layout_marginLeft="215dp"
-            android:id="@+id/button2"
-            android:layout_width="160dp"
-            android:layout_height="110dp"
-            android:backgroundTint="#03A9F4"
-            android:text="我的日程"
-            android:textSize="20dp">
+    <TextView
+        android:id="@+id/list_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/default_layout_padding"
+        android:paddingEnd="@dimen/default_layout_padding"
+        android:paddingTop="@dimen/default_inner_padding"
+        android:paddingBottom="@dimen/default_inner_padding"
+        android:textSize="18sp"
+        android:layout_gravity="center"
+        android:background="@color/color_white"
+        android:textColor="@color/default_text_color"
+        android:gravity="center"/>
 
-        </Button>
-    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_white">
 
+    </androidx.recyclerview.widget.RecyclerView>
 
 
 </LinearLayout>
